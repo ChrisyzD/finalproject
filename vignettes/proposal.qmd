@@ -1,0 +1,43 @@
+---
+title: "Project proposal"
+author: "Yizhe Dai"
+date: 2026-11-19
+---
+
+To: BST260 Teaching Team, Fall 2026
+
+# Overview
+
+I propose two analyses, each presented as a vignette in this package: one using NHANES and one combining the RAND State Firearm Law Database with CDC firearm mortality data. Both vignettes will document data provenance, give descriptive statistics for the variables of interest, state the investigative objectives, and report findings and limitations.
+
+# Analysis 1: Physical activity and systolic blood pressure in NHANES
+
+**Research question.** Among US adults aged 40 and over, how does leisure-time physical activity relate to systolic blood pressure?
+
+**Unit of analysis and population.** The unit is the individual survey participant. The population is adults aged 40 and over in the `NHANES` data frame of the NHANES R package (2009-2012 survey cycles). I will use `NHANESraw` with the survey weights when making population-level statements.
+
+**Exposure.** `PhysActive` (yes/no participation in moderate or vigorous activity) is the primary exposure, coded as a two-level factor. `PhysActiveDays` (days per week) is a secondary, ordinal exposure. Participants with a missing exposure will be excluded from the primary analysis; I will tabulate missingness by age, sex and race and compare the complete-case result with a multiple-imputation analysis.
+
+**Outcome.** `BPSysAve`, the average of the systolic readings, in mm Hg. It is continuous.
+
+**Confounders.** Chosen before looking at the data: age, sex (`Gender`), race (`Race1`), BMI, smoking status, education and household income. I will also examine age-by-sex interaction and use splines for the non-linear effects of age and BMI.
+
+**Methods.** Descriptive tables and plots, linear regression with adjustment for the confounders above, and survey-weighted estimates for comparison. Limitations to be discussed include the cross-sectional design, self-reported activity, and the lack of antihypertensive medication information in this extract.
+
+# Analysis 2: State firearm legislation and firearm mortality
+
+**Research question.** Do US states with more restrictive firearm legislation have lower firearm death rates?
+
+**Unit of analysis and population.** The unit is the state-year, for the 50 states and D.C. over the years covered by both datasets.
+
+**Exposure.** From `gunleg` (RAND State Firearm Law Database) I will construct, for each state and year, the cumulative number of restrictive provisions in effect and the cumulative number of permissive provisions in effect, using the effective dates and the interpretive categories in the data. Provisions with a missing effective date or an unclear restrictive/permissive classification will be reported and excluded from the counts, with a sensitivity analysis that includes them.
+
+**Outcome.** The age-adjusted firearm death rate per 100,000 population from `cdcfiremort` (CDC NCHS). It is continuous. Homicide rates from `cdcmurd` will be used as a secondary outcome.
+
+**Confounders.** Census region and division (from `datasets::state.region` and `state.division`), calendar year, and state population. A state fixed-effects model will account for time-invariant differences between states.
+
+**Methods.** I will write R functions that turn the legislation records into a tidy state-year table, then use time-series plots, maps, and regression of mortality on the legislation counts with state and year effects. Limitations to be discussed include the ecological design, the crude nature of provision counts, reverse causation (states may legislate in response to rising mortality), and differences in the years covered by the two sources.
+
+# Deliverables
+
+A valid R package named `finalproject` with a pkgdown site at <https://chrisyzd.github.io/finalproject>, containing two analysis vignettes and documented functions for the data preparation steps.
