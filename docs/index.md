@@ -1,17 +1,24 @@
-# bst260project-template
+# finalproject
 
-Instructions and template for projects for 2026 HSPH BST260
+Final project for HSPH BST260 (Introduction to Data Science), Fall 2026,
+by Yizhe Dai.
 
-Your project will be a working GitHub pages site that presents your
-interpretation of features of public health datasets.
+This R package and its pkgdown site present analyses of two public
+health datasets.
 
-Please see
-[instructions](https://vjcitn.github.io/bst260project-template/articles/instructions.html)
-to set up the infrastructure for your project and to learn about
-available datasets
+**NHANES**: leisure-time physical activity and systolic blood pressure
+among US adults aged 40 and over.
 
-Please see [project suggestion
-text](https://vjcitn.github.io/bst260project-template/articles/stubs.html)
-for some suggestions of how you might proceed with project work on
-selected datasets. More content will be added to this page in the near
-future.
+**RAND State Firearm Law Database and CDC firearm mortality**:
+restrictiveness of state firearm legislation and state firearm death
+rates.
+
+See the
+[proposal](https://chrisyzd.github.io/finalproject/articles/proposal.html)
+for the research questions and analysis plan.
+
+## Installation
+
+\
+`devtools``::``install_github``(``"ChrisyzD/finalproject"``)`\
+[`data`](https://rdrr.io/r/utils/data.html)`(``"waterborne"``, package ``=`` ``"finalproject"``)`

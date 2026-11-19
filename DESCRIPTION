@@ -11,7 +11,7 @@ Description: Final project for HSPH BST260, Fall 2026. The package
     systolic blood pressure among US adults in NHANES, and state firearm
     legislation in relation to firearm mortality using RAND and CDC data.
     Results are presented as vignettes on a pkgdown site.
-Depends: R (>= 4.5.0)
+Depends: R (>= 4.3.0)
 Suggests: knitr, testthat, rmarkdown, pkgdown, quarto, NHANES, dplyr,
     ggplot2
 License: Artistic-2.0

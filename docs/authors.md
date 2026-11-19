@@ -2,21 +2,22 @@
 
 ## Authors
 
-- **yourfirstname lastname**. Author, maintainer.
-  [](https://orcid.org/0000-0002-1825-0097)
+- **Yizhe Dai**. Author, maintainer.
 
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/vjcitn/bst260project-template/NA/NA/NA/blob/HEAD/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/ChrisyzD/finalproject/blob/HEAD/DESCRIPTION)
 
-lastname y (2026). *bst260project: project code and narrative*. R
-package version 0.0.3, <https://github.com/youreponame>.
+Dai Y (2026). *finalproject: Public Health Data Analyses for BST260
+(NHANES and US Firearm Mortality)*. R package version 0.0.3,
+https://chrisyzd.github.io/finalproject,
+<https://github.com/ChrisyzD/finalproject>.
 
-    @Manual{,
-      title = {bst260project: project code and narrative},
-      author = {yourfirstname lastname},
-      year = {2026},
-      note = {R package version 0.0.3},
-      url = {https://github.com/youreponame},
-    }
+@Manual{,\
+  title = {finalproject: Public Health Data Analyses for BST260 (NHANES and US Firearm Mortality)},\
+  author = {Yizhe Dai},\
+  year = {2026},\
+  note = {R package version 0.0.3, https://chrisyzd.github.io/finalproject},\
+  url = {https://github.com/ChrisyzD/finalproject},\
+}
