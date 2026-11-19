@@ -5,7 +5,7 @@ Authors@R:
     person(given = "Yizhe",
            family = "Dai",
            role = c("aut", "cre"),
-           email = "youremail@gmail.com")
+           email = "yizhedai@hsph.harvard.edu")
 Description: Final project for HSPH BST260, Fall 2026. The package
     documents two analyses of public health data: physical activity and
     systolic blood pressure among US adults in NHANES, and state firearm
