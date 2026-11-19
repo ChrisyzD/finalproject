@@ -1,20 +1,23 @@
-Package: bst260project
-Title: project code and narrative
+Package: finalproject
+Title: Public Health Data Analyses for BST260 (NHANES and US Firearm Mortality)
 Version: 0.0.3
 Authors@R:
-    person(given = "yourfirstname",
-           family = "lastname",
+    person(given = "Yizhe",
+           family = "Dai",
            role = c("aut", "cre"),
-           email = "youremail@gmail.com",
-           comment = c(ORCID = "0000-0002-1825-0097"))
-Description: provide text on what your project emphasizes and 
-	accomplishes in three or more complete sentences.
+           email = "youremail@gmail.com")
+Description: Final project for HSPH BST260, Fall 2026. The package
+    documents two analyses of public health data: physical activity and
+    systolic blood pressure among US adults in NHANES, and state firearm
+    legislation in relation to firearm mortality using RAND and CDC data.
+    Results are presented as vignettes on a pkgdown site.
 Depends: R (>= 4.5.0)
-Suggests: knitr, testthat, rmarkdown, pkgdown
+Suggests: knitr, testthat, rmarkdown, pkgdown, quarto, NHANES, dplyr,
+    ggplot2
 License: Artistic-2.0
 VignetteBuilder: quarto
 Encoding: UTF-8
-URL: https://github.com/youreponame
-BugReports: https://github.com/youreponame/issues
+URL: https://github.com/ChrisyzD/finalproject, https://chrisyzd.github.io/finalproject
+BugReports: https://github.com/ChrisyzD/finalproject/issues
 Config/roxygen2/version: 8.1.1
 Roxygen: list(markdown=TRUE)
